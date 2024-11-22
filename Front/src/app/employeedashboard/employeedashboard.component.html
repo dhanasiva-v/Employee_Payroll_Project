@@ -1,0 +1,117 @@
+<br>
+<nav class="navbar navbar-expand-lg bg-body-tertiary " style="margin-left: 19%;border: solid 2px;margin-right: 22%;">
+    <ul class="navbar-nav">
+        <li class="nav-item ml-4 mr-5">
+            <button class="btn btn-outline-warning" name="salary" (click)="getsal(employees.empId)"><b>SalaryDetails</b></button>
+        </li>&nbsp;&nbsp;&nbsp;
+        <li class="nav-item ml-4 mr-5">
+            <button class="btn btn-outline-warning" name="attendance" (click)="attendance(employees.empId)"><b>Attendance</b></button>
+        </li>&nbsp;&nbsp;&nbsp;
+        <li class="nav-item ml-4 mr-5">
+            <button class="btn btn-outline-warning" name="timesheet" (click)="timesheet(employees.empId)"><b>Timesheet</b></button>
+        </li>&nbsp;&nbsp;&nbsp;
+        <li class="nav-item ml-4 mr-5">
+            <button class="btn btn-outline-warning" name="schedule" (click)="Schedule(employees.empId)"><b>Schedule</b></button>
+        </li>&nbsp;&nbsp;&nbsp;
+        <li class="nav-item ml-4 mr-5">
+            <button class="btn btn-outline-warning" name="leave" (click)="Leave(employees.empId)"><b>Leave</b></button>
+        </li>
+        <li class="nav-item ml-4 mr-5">
+            <button class="btn btn-outline-danger" type="submit" style="float: right;"
+                (click)="Logout()">Logout</button>
+        </li>
+    </ul>
+</nav>
+
+<br><br>
+<div class="salary">
+
+    <h2 style="font-weight: bold;font-size: 30px ">Employee Details</h2>
+    <table class="table table-striped ">
+        <thead style="font-size: 40px;" class="text-center">
+            <tr>
+                <th>EmpId</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Street</th>
+                <th>Location</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Pincode</th>
+                <th>Mobno</th>
+                <th>EmailId</th>
+                <th>Password</th>
+                <th>Designation</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody style="font-size: 30px;" class="text-center">
+            <tr>
+
+                <td> {{employees.empId}} </td>
+                <td> {{employees.fName}} </td>
+                <td> {{employees.lName}} </td>
+                <td> {{employees.dob}} </td>
+                <td> {{employees.gender}} </td>
+                <td> {{employees.street}} </td>
+                <td> {{employees.location}} </td>
+                <td> {{employees.city}} </td>
+                <td> {{employees.state}} </td>
+                <td> {{employees.pincode}} </td>
+                <td> {{employees.mobNo}} </td>
+                <td> {{employees.emailId}} </td>
+                <td> {{employees.password}} </td>
+                <td> {{employees.designation}} </td>
+                <td>
+                    &nbsp;&nbsp;<button (click)="updateEmployee(employees.empId)" class="btn btn-success">Update</button>
+
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <h2 style="font-weight: bold;font-size: 30px">Salary Details</h2>
+    <table class="table table-striped ">
+        <thead style="font-size: 40px;" class="text-center">
+            <tr>
+                <th>SalId</th>
+                <th>EmpId</th>
+                <th>Basic pay</th>
+                <th>Dearness Allowance</th>
+                <th>House Rent Allowance</th>
+                <th>Gross salary</th>
+                <th> Pf amount</th>
+                <th>Tax</th>
+                <th>Deduction</th>
+                <th>NetPay</th>
+                <th> Transaction date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody style="font-size: 30px;" class="text-center">
+            <tr>
+            <td>{{salary.salId}}</td>
+            <td>{{salary.empId}}</td>
+            <td>{{salary.basicPay}}</td>
+            <td>{{salary.da}}</td>
+            <td>{{salary.hra}}</td>
+            <td>{{salary.grossSalary}}</td>
+            <td>{{salary.pfAmount}}</td>
+            <td>{{salary.tax}}</td>
+            <td>{{salary.deduction}}</td>
+            <td>{{salary.netPay}}</td>
+            <td>{{salary.tranDate}}</td><button class="btn btn-primary" (click)="printPage()"> PRINT</button>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer class="footer">
+        <div class="container">
+            <span>CopyrightⒸ 2024, Group3 RLL@Corporation </span>
+        </div>
+    </footer>

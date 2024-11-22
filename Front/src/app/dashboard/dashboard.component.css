@@ -1,0 +1,39 @@
+/* img 
+{
+  width:684px;
+  height:534px;
+  image-orientation:inherit;
+
+} */
+
+.back{
+  background-image: url('/assets/about-5.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.text-center {
+  text-align: center;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+  padding: 20px;
+}
+
+
+.footer {
+  height:90px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align:center;
+  
+}

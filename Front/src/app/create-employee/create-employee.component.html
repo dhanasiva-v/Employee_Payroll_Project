@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll</title>
+</head>
+<body >
+  <div class="container" style="max-width: 900px; background-color:white; margin-top: 30px;">
+    <br>
+    <h2 class="textual"><strong>EMPLOYEE REGISTRATION</strong></h2>
+ 
+      <br>
+ 
+ 
+    <form #Registerformform = "ngForm" (ngSubmit) = "onSubmit()">
+      <div class="row">
+        <div class="column">
+       
+     
+      <div class="form-group">
+        <label for="email"><strong>Email <span class="star">*</span>: </strong></label>
+        <input type="email"  class="form-control" placeholder="Enter email" name="email"  [(ngModel)] ="employee.emailId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required #email ="ngModel"
+ 
+        [class.is-invalid]= "email.invalid && email.touched " >
+ 
+        <div *ngIf="email.errors && (email.dirty && email.touched)" class="alert-email alert-danger-email"><br>
+ 
+                <div [hidden]="!email.errors['pattern']" style="color: rgb(158, 43, 43);">
+                  Please Enter a valid email.
+                </div>
+                <div [hidden]="!email.errors['required']">
+                  Email is required
+                </div>
+ 
+              </div>
+ 
+      </div>
+ 
+      <div class="form-group">
+        <label for="fName"><strong>First name <span class="star">*</span>:</strong></label>
+        <input type="fName" class="form-control"  placeholder="Enter first name" name="fName" [(ngModel)] ="employee.fName" #firstname ="ngModel" required
+              [class.is-invalid]="firstname.invalid && firstname.touched">
+              <small class="text-danger"  [class.d-none]= "firstname.valid || firstname.untouched">First name is required field</small>
+      </div>
+ 
+    <div class="form-group">
+      <label for="lName"><strong>Last name <span class="star">*</span>:</strong></label>
+      <input type="lName" class="form-control"  placeholder="Enter last name " name="lName" [(ngModel)] ="employee.lName" #lastname ="ngModel" required
+            [class.is-invalid]="lastname.invalid && lastname.touched">
+            <small class="text-danger"  [class.d-none]= "lastname.valid || lastname.untouched">Last name is required field</small>
+    </div>
+ 
+    <div class="form-group">
+      <label for="dob"><strong>Date of birth:</strong></label>
+      <input type=date class="form-control"  placeholder="Enter Date of birth " name="dob" [(ngModel)] ="employee.dob" #dob ="ngModel" required
+            [class.is-invalid]="dob.invalid && dob.touched">
+            <small class="text-danger"  [class.d-none]= "dob.valid || dob.untouched">Date of birth is required field</small>
+    </div>
+ 
+  <div class="form-group">
+    <label for="gender"><strong>Gender : <span class="star">*</span></strong></label><br>
+ 
+      <input type="radio" name="gender" value="male" [(ngModel)] ="employee.gender"  checked="checked" required> Male
+      <input type="radio" name="gender" value="female" [(ngModel)] ="employee.gender" required> Female
+      <input type="radio" name="gender" value="other" [(ngModel)] ="employee.gender" required> Other
+ 
+ 
+ 
+  </div>
+ 
+ 
+ 
+    <div class="form-group">
+      <label for="location"><strong>Location:</strong></label>
+      <input type="location" class="form-control"  placeholder="Enter your location" name="location" [(ngModel)] ="employee.location" #location ="ngModel" required
+            [class.is-invalid]="location.invalid && location.touched">
+            <small class="text-danger"  [class.d-none]= "location.valid || location.untouched">location required field</small>
+    </div>
+ 
+    <div class="form-group">
+      <label for="street"><strong>Street:</strong></label>
+      <input type="street" class="form-control"  placeholder="Enter your street name" name="street" [(ngModel)] ="employee.street" #street ="ngModel" required
+            [class.is-invalid]="street.invalid && street.touched">
+            <small class="text-danger"  [class.d-none]= "street.valid || street.untouched">Street name required field</small>
+    </div>
+ 
+ 
+  </div>
+ 
+  <div class="column">  
+ 
+ 
+    <div class="form-group">
+      <label for="city"><strong>City:</strong></label>
+      <input type="city" class="form-control"  placeholder="Enter your city name" name="city" [(ngModel)] ="employee.city" #city ="ngModel" required
+            [class.is-invalid]="city.invalid && city.touched">
+            <small class="text-danger"  [class.d-none]= "city.valid || city.untouched">City name required field</small>
+    </div>
+ 
+    <div class="form-group">
+      <label for="state"><strong>State:</strong></label>
+      <input type="state" class="form-control"  placeholder="Enter your state name" name="state" [(ngModel)] ="employee.state" #state ="ngModel" required
+            [class.is-invalid]="state.invalid && state.touched">
+            <small class="text-danger"  [class.d-none]= "state.valid || state.untouched">State name required field</small>
+    </div>
+    <div class="form-group">
+      <label for="pincode"><strong>Pincode:</strong></label>
+      <input type="pincode" class="form-control"  placeholder="Enter your area pincode " minLength="5" maxLength="7" name="pincode" [(ngModel)] ="employee.pincode" #pincode ="ngModel" required
+            [class.is-invalid]="pincode.invalid && pincode.touched">
+            <small class="text-danger"  [class.d-none]= "pincode.valid || pincode.untouched"> Pincode is required field</small>
+    </div>
+ 
+ 
+ 
+ 
+    <div class="form-group">
+      <label for="mobNo"><strong>Mobile number <span class="star">*</span>:</strong></label>
+      <input type="tel" class="form-control"  placeholder="Enter your mobile number " pattern="[6-9]{1}[0-9]{9}"  minlength="10" maxlength="10" name="mobNo" [(ngModel)] ="employee.mobNo" #mobNo ="ngModel" required
+            [class.is-invalid]="mobNo.invalid && mobNo.touched">
+ 
+           <div *ngIf="mobNo.errors && (mobNo.invalid && mobNo.touched)"><br>
+ 
+                <div  class="text-danger"  [hidden]="!mobNo.errors['pattern']">
+                Please input  valid mobile number.
+                </div>
+                <div   class="text-danger" [hidden]="!mobNo.errors['required']">
+                  Mobile number is required
+               </div>
+ 
+ 
+      </div>
+    </div>
+ 
+ 
+ 
+ 
+      <div class="form-group">
+        <label for="pwd"><strong>Password <span class="star">*</span>:</strong></label>
+        <input type="password" class="form-control"  placeholder="Enter password" minlength="8" maxlength="16" name="pwd" [(ngModel)] ="employee.password" #password ="ngModel" required
+              [class.is-invalid]="password.invalid && password.touched">
+              <small class="text-danger"  [class.d-none]= "password.valid || password.untouched">Password is required field, Password length should be min 8 or max 16 and special characters like @#$%^</small>
+      </div>
+ 
+     
+ 
+  <div class="form-group">
+    <label for="designation"><strong>Designation <span class="star">*</span>: </strong></label>
+      <select id="designation"  [(ngModel)] ="employee.designation"  name="designation" >
+        <option value="Developer">Developer</option>
+        <option value="Test engineer">Tester</option>
+        <option value="Business analyst">Designer</option>
+        </select>
+      </div>
+ 
+      <button [disabled]="Registerformform.form.invalid" type="submit" class="btn btn-success" >Register</button>&nbsp;&nbsp;&nbsp;
+      <button type="reset" class="btn btn-danger">Reset</button><br><br>
+ 
+      <a class="" href="emplogin" style="text-decoration: none;"><b>Existing user?</b></a>
+      <br><br>
+ 
+    </div>
+ 
+  </div>
+ 
+    </form>
+ 
+  </div>
+</body>
+</html>

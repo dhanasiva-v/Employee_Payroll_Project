@@ -1,0 +1,44 @@
+<div class="container" style="border-radius:25px;box-shadow: 60px -16px #fccd88; ">
+    <h2 class="p-2" style="color: #d49432;text-align:center"> Work Schedule Updation</h2>
+
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label>EmpId</label>
+            <input type="text" class="form-control" id="empId" [(ngModel)]="Schedule.empId" name="empId">
+        </div>
+
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" class="form-control" id="date" [(ngModel)]="Schedule.date" name="date">
+        </div>
+
+        <div class="form-group">
+            <label for="status">Shift</label>
+            <select class="form-control" id="time" [(ngModel)]="Schedule.shift" name="time">
+                <option value="Morning">Morning</option>
+                <option value="Evening">Evening</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>StartingTime</label>
+            <input type="time" class="form-control" id="stime" [(ngModel)]="Schedule.startingTime" name="stime">
+        </div>
+        <div class="form-group">
+            <label for="status">EndingTime</label>
+            <input type="time" class="form-control" id="etime" [(ngModel)]="Schedule.endTime" name="etime">
+
+        </div>
+        <div>
+            <label>Duration</label>
+            <select class="form-control" id="dtime" [(ngModel)]="Schedule.duration" name="dtime">
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <br>
+        <div class="acb" style="text-align:center">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+    </form>
+</div>

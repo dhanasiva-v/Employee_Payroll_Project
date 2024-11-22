@@ -1,0 +1,30 @@
+<br><br><nav class="text-center">
+  
+    <div class="text-center" >
+        <span style="font-size: 25px;" class="navbar-brand mx-auto "><b>Employee Leave</b></span>
+    </div>
+  </nav>
+  <br><br>
+<table class ="table " style="width: 70%;margin-left: 14.8%;text-align: center;">
+  
+    <thead style="color:rgb(0, 0, 0);font-size: 20px;">
+        <tr>
+            <th>EmpId</th>
+            <th>Leave Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Duration</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr>
+        <td> {{leave.empId}}</td>
+        <td> {{leave.leavetype}}</td>
+        <td> {{leave.startdate}}</td>
+        <td> {{leave.enddate}}</td>
+        <td> {{leave.duration}}</td>
+        
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-outline-danger" (click)="Back()" style="margin-left: 94%;">Back</button>

@@ -1,0 +1,34 @@
+.container{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #d49432;
+  border-radius: 15px;
+  box-shadow: 60px -16px #fccd88; 
+}
+
+.textual{
+  font-family: 'Arial Black',sans-serif;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear :both
+}
+.star{
+color: red;
+}
+#designation{
+margin-left: 10px;
+
+}

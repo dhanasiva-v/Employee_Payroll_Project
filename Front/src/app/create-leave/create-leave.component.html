@@ -1,0 +1,53 @@
+
+
+<div class="container">
+    <br>
+    <h3> CREATE LEAVE </h3>
+    <br>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label><strong>Employee Id:</strong></label>
+            <input type="text" class ="form-control" id = "empId"
+                [(ngModel)] = "leave.empId" name = "empId">
+        </div>
+
+        <div class="form-group">
+            <label><strong>Leave Type:</strong></label>
+            <select type="text" class ="form-control" id = "leavetype"
+                [(ngModel)] = "leave.leavetype" name = "leavetype">
+                <option value="earned leave"> Earned Leave </option>
+                <option value="casual leave"> Casual Leave </option>
+                <option value="sick leave"> Sick Leave </option>
+                </select>
+        </div>
+        <div class="row">
+            <div class="column">
+        <div class="form-group">
+            <label><strong>Start Date:</strong></label>
+            <input type="date" class ="form-control" id = "startdate"
+                [(ngModel)] = "leave.startdate" name = "startdate">
+        </div>
+             </div>      
+            <div class="column">
+        <div class="form-group">
+            <label><strong>End Date:</strong></label>
+            <input type="date" class ="form-control" id = "enddate"
+                [(ngModel)] = "leave.enddate" name = "enddate">
+        </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label><strong>Duration:</strong></label>
+            <select type="text" class ="form-control" id = "duration"
+                [(ngModel)] = "leave.duration" name = "duration">
+                <option value="full day">Full Day</option>
+                <option value="half day">Half Day</option>
+                </select>
+        </div>
+        <br>
+    <div class="text-center">
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    </div><br><br>
+    </form>
+   
+    </div> 

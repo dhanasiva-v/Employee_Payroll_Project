@@ -1,0 +1,52 @@
+<br>
+<nav class="navbar navbar-expand  navbar-fixed-top">
+  <ul class = "navbar-nav mr-auto mt-2 mt-lg-0">
+  <li class = "nav-item">
+        <a href="createtimesheet" routerLinkActive="active" class="btn btn-outline-primary" ><span style="font-size: 19px;">Create Timesheet</span></a>
+    </li>
+    
+  </ul> 
+  <div style="margin-right:40%;" >
+      <b><span style="font-size: 25px;" class="navbar-brand mx-auto">Timesheet List</span></b>
+  </div>
+  <ul class="nav navbar-nav my-2 my-lg-0">
+
+  </ul><button class="btn btn-outline-danger" type="submit" (click)="Logout()" style="margin-right: 81.5px;">Logout</button>
+</nav>
+<br><br>
+<table class="table " style="width: 70%; margin-left: 15%; border: 0.5px solid;">
+  <thead class="text-center" style="background-color:rgb(255, 255, 255);color:rgb(0, 0, 0) ">
+    <tr>
+      <th>EmpId</th>
+      <th>Date</th>
+      <th>InTime</th>
+      <th>OutTime</th>
+      <th>RegularTime</th>
+      <th>BreakTime</th>
+      <th>OverTimeHours</th>
+      <th>TotalHours</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody style="color:rgb(0, 0, 0);">
+    <tr *ngFor= "let timesheet of timesheets" class="text-center" >
+        <td style="color:black;">{{timesheet.empId}}</td>
+        <td style="color:black;">{{timesheet.date}}</td>
+        <td style="color:black;">{{timesheet.inTime}}</td>
+        <td style="color:black;">{{timesheet.outTime}}</td>
+        <td style="color:black;">{{timesheet.regularTime}}</td>
+        <td style="color:black;">{{timesheet.breakTime}}</td>
+        <td style="color:black;">{{timesheet.overtimeHours}}</td>
+        <td style="color:black;">{{timesheet.totalHours}}</td>
+        <td>
+            <button (click) = "updateTimesheet(timesheet.empId)" class="btn btn-success" > Update</button>
+            <button (click) = "deleteTimesheet(timesheet.empId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+        </td>
+
+    </tr>
+  </tbody>
+</table>
+&nbsp;&nbsp;&nbsp;
+<div class="text-center">
+  <a href="loginsuccess" class="btn btn-outline-danger" style="font-size:19.5px; width :80px;margin-left:86%">Back</a>
+  </div>

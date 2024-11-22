@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="table-header">
+    <h2>Salary report</h2>
+    <p>Monthly Salary Report</p>
+  </div>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+          <th scope="col">Salary ID</th>
+          <th scope="col">Employee Id</th>
+          <th scope="col">Basic pay</th>
+          <th scope="col">Dearness Allowance</th>
+          <th scope="col">House Rent Allowance</th>
+          <th scope="col">Gross Salary</th>
+          <th scope="col">Provident Fund</th>
+          <th scope="col">Tax</th>
+          <th scope="col">Deduction</th>
+          <th scope="col">NetPay</th>
+          <th scope="col">Transaction date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <th >{{salary.salId}}</th>
+          <td>{{salary.empId}}</td>
+          <td>{{salary.basicPay}}</td>
+          <td>{{salary.da}}</td>
+          <td>{{salary.hra}}</td>
+          <td>{{salary.grossSalary}}</td>
+          <td>{{salary.pfAmount}}</td>
+          <td>{{salary.tax}}</td>
+          <td>{{salary.deduction}}</td>
+          <td>{{salary.netPay}}</td>
+          <td>{{salary.tranDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <button type="submit" class="btn btn-secondary" (click)="gotolist()">Back</button> -->
+    </div>

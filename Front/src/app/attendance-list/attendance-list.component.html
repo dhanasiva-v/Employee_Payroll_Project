@@ -1,0 +1,40 @@
+<br><nav class="navbar navbar-expand  navbar-fixed-top">
+    <ul class = "navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class = "nav-item" style="margin-left: 10px;">
+        <a href="createattendance" routerLinkActive="active" class="btn btn-outline-primary" ><span >Create Attendance</span></a>
+    </li>
+    </ul> <br>
+    <div style="margin-right:35%;" >
+        <span style="font-size: 25px;" class="navbar-brand mx-auto"><b>Employee Attendance List</b></span>
+    </div><br><br>
+    <ul class="nav navbar-nav my-2 my-lg-0">
+
+    </ul><button class="btn btn-outline-danger" type="submit" (click)="Logout()" style="font-size:15px ; margin-right: 80px;">Logout</button>
+    
+</nav>
+
+<br><br>
+<table class ="table" style="border: 1px solid; width: 80%; margin-left: 8.5%;">
+    <thead>
+        <tr class="text-center">
+            <th>EmpId</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr *ngFor = "let employ of attend">
+        <td> {{employ.empId}}</td>
+        <td> {{employ.date}}</td>
+        <td> {{employ.status}}</td>
+        <td>
+            <button (click) = "deleteEmployee(employ.empId)" class = "btn btn-danger">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+</table>
+&nbsp;&nbsp;&nbsp;<br>
+<div class="text-center">
+<a href="loginsuccess" class="btn btn-outline-danger" style="font-size:15px ; width: 80px;margin-left: 87%;">Back</a>
+</div>

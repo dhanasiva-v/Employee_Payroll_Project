@@ -1,0 +1,25 @@
+.container{
+  background-image: url('/assets/about-5.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 92.3vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-size: flex;
+
+  background-position: center;
+  border-radius: 12px;
+  /* box-shadow: 10px 10px 5px rgb(223, 221, 221); */
+  margin-top: -20%;
+  width: 50vh;
+}
+
+span{
+  color: darkblue;
+}

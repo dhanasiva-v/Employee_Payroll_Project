@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Fugaz One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet'>
+    
+    
+</head>
+
+
+<body style="color:  #d49432;">
+    <br><br>
+
+    <div class="form" style="border-radius:15px; box-shadow: 60px -16px #fccd88;">
+        <br>
+        <div >
+            <h3 style="text-align: center;">UPDATE EMPLOYEE DETAILS</h3>
+        </div>
+        <br>
+        <div class="col-md-10 offset-md-1">
+            <form (ngSubmit)="onSubmit()" >
+                <div class="row">
+                    <div class="col">
+
+                        <div class="form-group">
+                            <label><b>Employee ID</b></label><input type="text" class="form-control" id="empId"
+                                [(ngModel)]="employee.empId" name="empId" disabled="employee.empId">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b> First Name</b></label><input type="text" class="form-control" id="firstName"
+                                [(ngModel)]="employee.fName" name="firstName">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Last Name</b></label><input type="text" class="form-control" id="LastName"
+                                [(ngModel)]="employee.lName" name="LastName">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Date of birth (Format : YYYY-MM-DD)</b></label><input type="text"
+                                class="form-control" id="dob" [(ngModel)]="employee.dob" name="dob">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Gender</b></label><input type="text" class="form-control" id="gender"
+                                [(ngModel)]="employee.gender" name="gender">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Mobile no</b></label><input type="text" class="form-control" id="mobNo"
+                                [(ngModel)]="employee.mobNo" name="mobNo">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>EmailId</b></label><input type="text" class="form-control" id="emailId"
+                                [(ngModel)]="employee.emailId" name="emailId">
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="form-group">
+                            <label><b>Password</b></label><input type="text" class="form-control" id="password"
+                                [(ngModel)]="employee.password" name="password" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Designation</b></label><input type="text" class="form-control" id="designation"
+                                [(ngModel)]="employee.designation" name="designation">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>street</b></label><input type="text" class="form-control" id="street"
+                                [(ngModel)]="employee.street" name="street">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Location</b></label><input type="text" class="form-control" id="location"
+                                [(ngModel)]="employee.location" name="location">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>City</b></label><input type="text" class="form-control" id="city"
+                                [(ngModel)]="employee.city" name="city">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>State</b></label><input type="text" class="form-control" id="state"
+                                [(ngModel)]="employee.state" name="state">
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Pincode</b></label><input type="text" class="form-control" id="pincode"
+                                [(ngModel)]="employee.pincode" name="pincode">
+                        </div>
+                    </div>
+                   
+                </div>
+                <br><br>
+                <div class="text-center">
+                <button  class="btn btn-success" type="submit">Submit</button>
+            </div></form>
+        </div>
+    </div>
+
+</body>
+
+</html>

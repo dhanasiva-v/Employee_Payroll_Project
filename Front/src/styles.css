@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files*/
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.footer
+{
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+}
+
+*{
+    font-family: 'Lusitana';
+}
+
+*{
+    background-image: url();
+}

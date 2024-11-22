@@ -1,0 +1,44 @@
+<br>
+<nav class="navbar navbar-expand  navbar-fixed-top">
+    <ul class = "navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class = "nav-item">
+          <a href="createleave" routerLinkActive="active" class="btn btn-outline-primary" ><span style="font-size:20px">Create leave</span></a>
+      </li>
+      
+    </ul> 
+    <div style="margin-right:35%;" >
+        <span style="font-size: 25px;" class="navbar-brand mx-auto">Leave List of Employees</span>
+    </div>
+    <ul class="nav navbar-nav my-2 my-lg-0">
+  
+    </ul><button class="btn btn-outline-danger" type="submit" (click)="Logout()" style="margin-right: 86px;">Logout</button>
+  </nav>
+  <br>
+  <table class="table " style="border: 1px solid; width: 70%; margin-left: 11%;" >
+    <thead class="text-center" style="background-color: rgb(255, 254, 254);color:rgb(0, 0, 0)">
+        <tr>
+            <th>EmpId</th>
+            <th>Leave Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Duration</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody style="color:rgb(12, 12, 12);background-size: cover; background-image: url('https://img.freepik.com/free-photo/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg');">
+        <tr *ngFor = "let leave of leaves" class="text-center">
+        <td style="color:rgb(0, 0, 0)"> {{leave.empId}}</td>
+        <td style="color:black"> {{leave.leavetype}}</td>
+        <td style="color:black"> {{leave.startdate}}</td>
+        <td style="color:black"> {{leave.enddate}}</td>
+        <td style="color:black"> {{leave.duration}}</td>
+        <td>
+            <button (click) = "deleteLeave(leave.empId)" class = "btn btn-danger">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+</table>
+&nbsp;&nbsp;&nbsp;<div class="text-center">
+    <a href="loginsuccess" class="btn btn-outline-danger" style="font-size:18px;margin-left: 86%;">Back</a>
+    </div>

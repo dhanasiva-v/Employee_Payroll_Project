@@ -1,0 +1,49 @@
+<br>
+<div class="container" style="background-size:cover; border-radius:15px;box-shadow: 60px -16px #fccd88;">
+    <br>
+    <div class="text-center">
+    <h3> Create Work Schedule </h3></div>
+    <form #createemp= ngForm (ngSubmit) = "onSubmit()">
+    
+ 
+            <label>EmpId</label>
+            <input type="text" class ="form-control" id = "empId"
+                [(ngModel)] = "Schedule.empId" name = "empId" required>
+       
+    
+       
+            <label>Date</label>
+            <input type="date" class ="form-control" id = "date"
+                [(ngModel)] = "Schedule.date" name = "date" required>
+    
+
+            <label for="status">Shift</label>
+            <select  class ="form-control" id = "time"
+                [(ngModel)] = "Schedule.shift" name = "time" required>
+            <option value="Morning">Morning</option>
+            <option value="Evening">Evening</option>
+            </select>
+
+
+            <label>StartingTime</label>
+            <input type="time" class ="form-control" id = "stime"
+                [(ngModel)] = "Schedule.startingTime" name = "stime" required>
+
+            <label for="status">EndingTime</label>
+            <input type="time" class ="form-control" id = "etime"
+                [(ngModel)] = "Schedule.endTime" name = "etime" required>
+            
+ 
+        <label>Duration</label>
+            <select class ="form-control" id = "dtime"
+                [(ngModel)] = "Schedule.duration" name = "dtime">
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+        <div class="text-center">
+        <input  class = "m-2 btn btn-success" type ="submit" value="Submit">
+    </div>
+   
+    </form>
+</div>

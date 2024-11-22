@@ -1,0 +1,41 @@
+<div class="container p-3" style="border-radius:15px;box-shadow: 60px -16px #fccd88;">
+  <h2 class="text-center" style="color: #d49432;font-family: 'Arial Black',sans-serif;"> Employee Login</h2>
+  <!-- <h1 style="color: rgb(223, 8, 116);">EMPLOYEE LOGIN</h1> -->
+  <form #loginform = "ngForm" (ngSubmit) = "loginEmp(loginform)">
+
+    <div class="form-group">
+      <label for="email">Email: </label>
+      <input type="email"  class="form-control" placeholder="Enter email" id="email" name="email"  [(ngModel)] ="employee.emailId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required #email ="ngModel"
+
+      [class.is-invalid]= "email.invalid && email.touched " >
+
+      <div *ngIf="email.errors && (email.dirty && email.touched)" class="alert-email alert-danger-email"><br>
+
+              <div [hidden]="!email.errors['pattern']" style="color: red;">
+                Please enter a valid email.
+              </div>
+              <div [hidden]="!email.errors['required']">
+                Email is required
+              </div>
+
+            </div>
+          </div>
+
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control"  placeholder="Enter password" id="pwd" name="pwd" [(ngModel)] ="employee.password" #password ="ngModel" required
+            [class.is-invalid]="password.invalid && password.touched">
+            <small class="text-danger"  [class.d-none]= "password.valid || password.untouched">Password is required field</small>
+    </div>
+    <!-- <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div> -->
+    <div class= "form-group">
+      <a href="checkempdetails"  style="text-decoration: none;">Forgot password?</a>
+    </div>
+    <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-success">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="reset" class="btn btn-danger">Reset</button><br><br>
+
+    <span class="text-blue"></span><a href= "registeration"  style="text-decoration: none;">Are you New Employee?</a>
+  </form>
+  </div>

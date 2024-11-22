@@ -1,0 +1,31 @@
+<br><br><nav class="text-center ">
+  
+    <div class="text-center" style="margin-right: 10%">
+        <span style="font-size: 25px;" class="navbar-brand mx-auto ;"><b>Employee Work Schedule</b></span>
+    </div>
+  </nav>
+<br>
+<br>
+<table class ="table" style="width: 70%;margin-left: 15%;">
+    <thead style=" color:rgb(0, 0, 0);text-align: center;">
+        <tr>
+            <th>EmpId</th>
+            <th>Start Date</th>
+            <th>Shift</th>
+            <th>StartingTIme</th>
+            <th>EndingTIme</th>
+            <th>Duration</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr>
+        <td> {{Schedule.empId}}</td>
+        <td> {{Schedule.date}}</td>
+        <td> {{Schedule.shift}}</td>
+        <td> {{Schedule.startingTime}}</td>
+        <td>{{Schedule.endTime}}</td>
+        <td>{{Schedule.duration}}</td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-outline-danger" (click)="Back()" style="margin-left: 94%;">Back</button>

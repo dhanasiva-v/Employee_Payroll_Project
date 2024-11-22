@@ -1,0 +1,73 @@
+<br><br><br>
+<div class="container"
+  style="background-size:cover;height:400px;margin-top: 40px;border-radius:15px;box-shadow: 60px -16px #fccd88; margin-left: 12%;">
+  <div class="text-center" style="color: #d49432;">
+    <br>
+    <h2><b>Monthly Salary Slip </b></h2><br>
+    
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table" style="margin-left: 80px;">
+        <thead style=" color: #d49432;">
+          
+
+          <tr>
+            <th scope="col">Employee Id</th>
+            <td>{{salary.empId}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Basic pay</th>
+            <td>{{salary.basicPay}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Dearness Allowance</th>
+            <td>{{salary.da}}</td>
+          </tr>
+          <tr>
+            <th scope="col">House Rent Allowance</th>
+            <td>{{salary.hra}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Gross Salary</th>
+            <td>{{salary.grossSalary}}</td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="col">
+      <table class="table" style=" color: #d49432;margin-left: 80px;">
+        <thead>
+
+          <tr>
+            <th scope="col">Provident Fund</th>
+            <td>{{salary.pfAmount}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Tax</th>
+            <td>{{salary.tax}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Deduction</th>
+            <td>{{salary.deduction}}</td>
+          </tr>
+          <tr>
+            <th scope="col">NetPay</th>
+            <td>{{salary.netPay}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Transaction date</th>
+            <td>{{salary.tranDate}}</td>
+          </tr>
+
+        </thead>
+      </table>
+    </div>
+
+    <div class="text-center">
+      <br><br>
+      <button type="submit" class="btn btn-success" style="margin-left: 79%;margin-top: 20px;" (click)="gotolist()">Back</button>
+    </div>
+  
+  </div>
+</div>

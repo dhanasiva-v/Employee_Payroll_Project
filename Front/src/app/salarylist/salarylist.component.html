@@ -1,0 +1,73 @@
+<br>
+<nav class="navbar navbar-expand  navbar-fixed-top">
+  <ul class = "navbar-nav mr-auto mt-2 mt-lg-0">
+  <li class = "nav-item">
+    <button type="button" class="btn btn-outline-primary" (click)="goToAddSalary()">Add Salary</button>
+    </li>
+    
+  </ul> 
+  <div style="margin-right:39%;" >
+      <span style="font-size: 35px;" class="navbar-brand mx-auto">Salary list</span>
+  </div>
+  <ul class="nav navbar-nav my-2 my-lg-0">
+
+  </ul><button class="btn btn-outline-danger" type="submit" (click)="Logout()" style="margin-right: 87px;">Logout</button>
+</nav>
+
+<br>
+
+<!-- <button class="btn btn-danger" type="submit" (click)="Logout()" style="float: right;">Logout</button>
+<div class="container">
+  <div style="background-color: blue;">
+    <h2>Salary list</h2>
+    <p>Monthly salary list of employees</p>
+    <button type="button" class="btn btn-success" (click)="goToAddSalary()">Add Salary</button>
+  </div> -->
+ 
+    <table class="table" style="width: 75%;margin-left: 12%; border: 1px solid;">
+      <thead class="bg-white text-dark text-center">
+      <tr>
+        <th scope="col">Salary ID</th>
+        <th scope="col">Employee Id</th>
+        <th scope="col">Basic pay</th>
+        <th scope="col">Dearness Allowance</th>
+        <th scope="col">House Rent Allowance</th>
+        <th scope="col">Gross Salary</th>
+        <th scope="col">Provident Fund</th>
+        <th scope="col">Tax</th>
+        <th scope="col">Deduction</th>
+        <th scope="col">NetPay</th>
+        <th scope="col">Transaction date</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead>
+      <tbody class="text-center" >
+      <tr *ngIf="salary.length ===0">
+        <td colspan="5" ><h2 style="text-align: center;">“No employee salary yet”</h2></td>
+      </tr>
+      <tr *ngFor="let sal of salary">
+        <td >{{sal.salId}}</td>
+        <td>{{sal.empId}}</td>
+        <td>{{sal.basicPay}}</td>
+        <td>{{sal.da}}</td>
+        <td>{{sal.hra}}</td>
+        <td>{{sal.grossSalary}}</td>
+        <td>{{sal.pfAmount}}</td>
+        <td>{{sal.tax}}</td>
+        <td>{{sal.deduction}}</td>
+        <td>{{sal.netPay}}</td>
+        <td>{{sal.tranDate}}</td>
+        <td>
+          <button type="button" class="btn btn-success" (click)="goToEditSalary(sal.salId)" >Edit</button>&nbsp;&nbsp;
+          <button type="button" class="btn btn-warning" (click)="goToViewSalary(sal.salId) ">View</button>&nbsp;&nbsp;
+          <button type="button" class="btn btn-danger" (click)="deleteSalary(sal.salId)">Delete</button>
+        </td>
+         </tr>
+    
+      </tbody>
+    </table>
+    
+
+    &nbsp;&nbsp;&nbsp;<div class="text-center">
+      <a href="loginsuccess" class="btn btn-outline-danger" style="font-size:20px;margin-left: 87%;">Back</a>
+      </div>

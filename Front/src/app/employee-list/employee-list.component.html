@@ -1,0 +1,95 @@
+<br><nav class="navbar navbar-expand-lg bg-body-tertiary " style="margin-left: 19%;border: solid 2px;margin-right: 22%;">
+    <ul class="navbar-nav">
+        <li class="ml-4 mr-2  nav-item">
+            <a href="createemployee" routerLinkActive="active" class="nav-link text-white"> <span
+                    class="btn btn-outline-warning"><b>New Employee</b> </span></a>
+        </li>
+        <li class="ml-3 mr-1 nav-item">
+            <a href="empattendance" routerLinkActive="active" class="nav-link text-white"><span
+                    class="btn btn-outline-warning"> <b>Attendance List</b></span></a>
+        </li>
+        <li class="ml-3 mr-1 nav-item">
+            <a href="timesheetlist" routerLinkActive="active" class="nav-link text-white"><span
+                    class="btn btn-outline-warning"><b> Timesheet List</b></span></a>
+        </li>
+        <li class="ml-3 mr-1 nav-item">
+            <a href="schedulelist" routerLinkActive="active" class="nav-link text-white"><span
+                    class="btn btn-outline-warning"><b>Schedule List</b></span></a>
+        </li>
+        <li class="ml-3 mr-1 nav-item">
+            <a href="leavelist" routerLinkActive="active" class="nav-link text-white"><span
+                    class="btn btn-outline-warning"><b>Leave List</b></span></a>
+        </li>
+        <li class="ml-3 mr-1 nav-item">
+            <a href="salarylist" routerLinkActive="active" class="nav-link text-white"><span
+                    class="btn btn-outline-warning"><b>Salary List</b></span></a>
+        </li>
+
+    </ul>
+
+    <button class="btn btn-outline-danger" type="submit" style="float: right;margin-left: 30px;"
+        (click)="Logout()">Logout</button>
+
+
+    <!-- <h1 class="text-center" style="align-items: center;"> {{title}} </h1>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div> -->
+</nav>
+<br>
+<nav>
+    <h2 style="padding:5px;margin:0px;background-image: url('https://freelinkedinbackgrounds.com/wp-content/uploads/2015/01/Abstract_004.jpg');"
+        class="text-center text-white"><span
+            style="font-weight:none;font-family:'Times New Roman', Times, serif">Employee List</span></h2>
+</nav>
+<table class="table text-center">
+
+    <thead class="table-dark">
+        <tr>
+            <th>EmpId</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Street</th>
+            <th>Location</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Pincode</th>
+            <th>Mobno</th>
+            <th>EmailId</th>
+            <th>Designation</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody class="text-blue"
+        style="background-image:url('http://wallpaperstock.net/blue_wallpapers_3057_852x480.jpg');background-size:cover">
+        <tr *ngFor="let admin of Admins">
+            <td> {{admin.empId}} </td>
+            <td> {{admin.fName}} </td>
+            <td> {{admin.lName}} </td>
+            <td> {{admin.dob}} </td>
+            <td> {{admin.gender}} </td>
+            <td> {{admin.street}} </td>
+            <td> {{admin.location}} </td>
+            <td> {{admin.city}} </td>
+            <td> {{admin.state}} </td>
+            <td> {{admin.pincode}} </td>
+            <td> {{admin.mobNo}} </td>
+            <td> {{admin.emailId}} </td>
+            <td> {{admin.designation}} </td>
+            <td>
+                <button (click)="updateEmployee(admin.empId)" class="btn btn-success">Update</button>&nbsp;&nbsp;
+                <button (click)="deleteEmployee(admin.empId)" class="btn btn-danger">Delete</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<footer class="footer">
+    <div class="container">
+        <span>CopyrightⒸ 2024, Group3 RLL@Corporation </span>
+    </div>
+</footer>

@@ -1,0 +1,21 @@
+.navbar-nav {
+  color: white;
+  font-size: small;
+}
+a
+{
+  font-size:17px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+tr,th,td{
+  font-size:15px;
+}

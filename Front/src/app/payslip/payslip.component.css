@@ -1,0 +1,18 @@
+.table-header{
+    text-align:center;
+}
+.table,th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.container{
+    overflow-x: auto;
+}
+::-webkit-scrollbar{
+    height: 6px;
+    width: 6px;
+    background: gray;
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: #5f5f5f;
+    border-radius: 10px}

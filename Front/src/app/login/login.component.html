@@ -1,0 +1,48 @@
+<div class="container" style="max-width: 100%;">
+  <div class="row">
+    <div class="card">
+      <div class="box">
+        <div class="text-center mb-3">
+        </div>
+        <h1 style="text-align: center; font-family:serif, sans-serif;"><b>Admin Login</b></h1>
+        <form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
+          <small class="text-danger">{{msg}}</small>
+          <div class="form-group">
+            <label for="email"><b>Email: </b></label>
+            <input type="email" class="form-control" placeholder="Enter a valid email" name="email" 
+              [(ngModel)]="user.emailId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required #email="ngModel"
+              [class.is-invalid]="email.invalid && email.touched ">
+
+            <div *ngIf="email.errors && (email.dirty && email.touched)" class="alert-email alert-danger-email"><br>
+
+              <div [hidden]="!email.errors['pattern']" style="color: red;">
+                Please enter a valid email.
+              </div>
+              <div [hidden]="!email.errors['required']">
+                Email is required
+              </div>
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pwd"><b>Password:</b></label>
+            <input type="password" class="form-control" placeholder="Enter password" name="password"
+              [(ngModel)]="user.password" required #password="ngModel"
+              [class.is-invalid]="email.invalid && email.touched">
+
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched ">This is required
+              field</small>
+          </div>
+          <br />
+          <button [disabled]="loginform.form.invalid" type="submit"
+          class="btn btn-success">Login</button>&nbsp;&nbsp;&nbsp;
+          <a href="checkempdetails" class="btn btn-danger">Forget Password?</a><br><br>
+        </form>
+        <a href="registeradm" style="text-decoration: none;"><span style="color: rgb(0, 102, 255);"><b>New user ?</b></span></a>
+        
+      </div>
+      <br>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+<br><br><br><br><br>
+  <div class="container" style="background-size:cover; border-radius:15px;color:  #d49432;
+  box-shadow: 60px -16px #fccd88;">
+  <br>
+    <div class="text-center">
+    <h3> Create Timesheet </h3></div>
+    <br>
+    <form #registertimesheet="ngForm" (ngSubmit) = "onSubmit()">
+      <div class="row">
+        <div class="col">
+      <div class="form-group">
+          <label>EmpId</label>
+          <input type="text"  class="form-control" id="empId"  
+               [(ngModel)] ="timesheet.empId " name="empId" required>
+               
+      </div>
+  
+      <div class="form-group">
+          <label>Date</label>
+          <input type="week" class="form-control" id="date" 
+               [(ngModel)] ="timesheet.date " name="date" required>
+      </div>
+  
+      <div class="form-group">
+          <label>InTime</label>
+          <input type="time" class="form-control" id="intime" 
+               [(ngModel)] ="timesheet.inTime " name="inTime" required>
+      </div>
+   
+    
+      <div class="form-group">
+          <label>OutTime</label>
+          <input type="time" class="form-control" id="outTime" 
+               [(ngModel)] ="timesheet.outTime " name="outTime" required>
+      </div>
+    </div><div class="col">
+      <div class="form-group">
+          <label for="regularTime">Select Regular Hours:</label>
+          <select class="form-control"  [(ngModel)]="timesheet.regularTime" name="regularTime" required> 
+            <option span="Nil">Select</option>
+            <option id="1">1</option>
+            <option id="2">2</option>
+            <option id="3">3</option>
+            <option id="4">4</option>
+            <option id="5">5</option>
+            <option id="6">6</option>
+            <option id="7">7</option>
+            <option id="8">8</option>
+            <option id="9">9</option>
+            <option id="10">10</option>
+            <option id="11">11</option>
+          </select>
+        </div>
+  
+      <div class="form-group">
+          <label>BreakTime Hours</label>
+          <select class="form-control" id="breakTime" 
+               [(ngModel)] ="timesheet.breakTime " name="breakTime" required>
+               <option value="Nil">Select</option>
+               <option type="1">1</option>
+               <option type="2">2</option>
+               <option type="3" selected>3</option>
+              </select>
+      </div>
+  
+      <div class="form-group">
+          <label for="overtimeHours">Select OverTime Hours:</label>
+          <select class="form-control"  [(ngModel)]="timesheet.overtimeHours" name="overtimeHours" required>
+            <option span="Nil">Select</option>
+            <option span="1">1</option>
+            <option span="2">2</option>
+            <option span="3">3</option>
+            <option span="4">4</option>
+            <option span="5">5</option>
+            <option span="6">6</option>
+            <option span="7">7</option>
+            <option span="8">8</option>
+            <option span="9">9</option>
+            <option span="10">10</option>
+            <option span="11">11</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="totalHours">Select Total Hours:</label>
+          <select class="form-control"  [(ngModel)]="timesheet.totalHours" name="totalHours" required>
+            <option span="Nil">Select</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+            <option value='11'>11</option>
+            <option value='12'>12</option>
+          </select>
+        </div>
+  </div></div>
+  <br>
+  <div class="text-center">
+      <button [disabled]="registertimesheet.form.invalid" class=" mr-2 btn btn-success" type="submit">Submit</button> 
+        <a href="timesheetlist" style=" color: #f5eef3;" class="ml-2 btn btn-danger">Back</a></div>
+  </form>
+</div>

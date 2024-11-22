@@ -1,0 +1,24 @@
+.container {
+  margin-top: 40px;
+  max-width: 500px;
+  text-decoration: bold;
+  color: #d49432;
+  border-radius: 15px;
+  box-shadow: 60px -16px #fccd88;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+

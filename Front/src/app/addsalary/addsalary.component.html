@@ -1,0 +1,76 @@
+<div class="container p-3" style="border-radius:15px;box-shadow: 60px -16px #fccd88;  ">
+  <h2 class="p-2" style="color: #d49432;text-align:center"> Add salary</h2>
+
+
+  <form  name="form1" #addsalaryform="ngForm" (ngSubmit)="addSalaryformsubmit()">
+   <div class="row">
+    <div class="col">
+    <div class="form-group">
+      <label for="employeeid">Employee id:</label>
+      <input type="text" class="form-control" required [(ngModel)]="salary.empId" name="employeeid" placeholder="Enter the employee id">
+    </div>
+    <div class="form-group">
+      <label for="bp">Basic pay:</label>
+      <input type="text" class="form-control" required [(ngModel)]="salary.basicPay" name="bp" placeholder="Enter the basic pay">
+    </div>
+    <div class="form-group">
+      <label for="da">Dearness Allowance</label>
+      <input type="text" class="form-control"  [(ngModel)]="salary.da"   name="da">
+      <small _ngcontent-dix-c51="" class="text-success">value="{{(salary.basicPay)*0.5}}"</small>
+
+    </div>
+
+    <div class="form-group">
+      <label for="hra">House Rent Allowance :  </label>
+      <input type="text" class="form-control"     [(ngModel)]="salary.hra"  name="hra">
+      <small _ngcontent-dix-c51="" class="text-success">value="{{(salary.basicPay)*0.5}}"</small>
+    </div>
+
+    <div class="form-group">
+      <label for="grosssalary">Gross salary :  </label>
+      <input type="text" class="form-control" [(ngModel)]="salary.grossSalary"  name="grosssalary">
+      <small _ngcontent-dix-c51="" class="text-success">value="{{(salary.basicPay*0.5)+(salary.basicPay*0.5)+(salary.basicPay*1)}}"  </small>
+    </div>
+
+
+    <div class="form-group">
+      <label for="pfamount">Pf amount:</label>
+      <input type="text" class="form-control" [(ngModel)]="salary.pfAmount" name="pfamount">
+      <small _ngcontent-dix-c51="" class="text-success">value="{{(((salary.basicPay*0.5)+(salary.basicPay*0.5)+(salary.basicPay*1))*(0.02))}}" </small>
+    </div>
+
+    <div class="form-group">
+      <label for="tax">Tax:</label>
+      <input type="text" class="form-control" [(ngModel)]="salary.tax" name="tax">
+      <small _ngcontent-dix-c51="" class="text-success">value="{{(((salary.basicPay*0.5)+(salary.basicPay*0.5)+(salary.basicPay*1))*(0.01))}}" </small>
+    </div>
+
+    <div class="form-group">
+      <label for="deduction">Deduction:</label>
+      <input type="text" class="form-control" [(ngModel)]="salary.deduction" name="deduction">
+      <small _ngcontent-dix-c51="" class="text-success">value="{{(((salary.basicPay*0.5)+(salary.basicPay*0.5)+(salary.basicPay*1))*(0.02))+(((salary.basicPay*0.5)+(salary.basicPay*0.5)+(salary.basicPay*1))*(0.01))}}" </small>
+    </div>
+
+    <div class="form-group">
+      <label for="netPay">NetPay:</label>
+      <input type="text" class="form-control"  [(ngModel)]="salary.netPay" name="netPay">
+      <small _ngcontent-dix-c51="" class="text-success">value="{{((salary.basicPay*2))-((((salary.basicPay*0.5)+(salary.basicPay*0.5)+(salary.basicPay*1))*(0.02))+(((salary.basicPay*0.5)+(salary.basicPay*0.5)+(salary.basicPay*1))*(0.01)))}}"</small>
+    </div>
+
+
+
+
+    <div class="form-group">
+      <label for="transdate">Transaction date:</label>
+      <input type="date" class="form-control" required [(ngModel)]="salary.tranDate" name="transdate" placeholder="Enter the transaction date">
+    </div>
+    </div>
+    <div class="text-center">
+    <button [disabled]="addsalaryform.form.invalid"  class="btn btn-outline-success" type="submit" >Submit</button>
+    
+    <button type="submit" class="btn btn-outline-danger" (click)="gotolist()" style="margin-left: 38px;">Back</button>
+  </div>
+</div>
+
+  </form>
+  </div>

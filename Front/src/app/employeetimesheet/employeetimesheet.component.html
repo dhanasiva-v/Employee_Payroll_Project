@@ -1,0 +1,36 @@
+<nav class="text-center ">
+
+  <div class="text-center">
+    <span style="font-size: 25px;" class="navbar-brand  "><b>Employee Timesheet List</b></span>
+  </div>
+</nav>
+<br><br>
+<table class="table" style="margin-left: 9%; width: 80%;text-align: center;">
+  <thead style="color:rgb(2, 2, 2);">
+    <tr>
+      <th>EmpId</th>
+      <th>Date</th>
+      <th>InTime</th>
+      <th>OutTime</th>
+      <th>RegularTime</th>
+      <th>BreakTime</th>
+      <th>OverTimeHours</th>
+      <th>TotalHours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+      <td style="color: black;">{{timesheet.empId}}</td>
+      <td style="color: black;">{{timesheet.date}}</td>
+      <td style="color: black;">{{timesheet.inTime}}</td>
+      <td style="color: black;">{{timesheet.outTime}}</td>
+      <td style="color: black;">{{timesheet.regularTime}}</td>
+      
+      <td style="color: black;">{{timesheet.breakTime}}</td>
+      <td style="color: black;">{{timesheet.overtimeHours}}</td>
+      <td style="color: black;">{{timesheet.totalHours}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<button class="btn btn-outline-danger" (click)="Back()"  style="margin-left: 94%;"><b>Back</b></button>

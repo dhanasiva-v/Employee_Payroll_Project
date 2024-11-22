@@ -1,0 +1,10 @@
+.container {
+    
+    background-size: cover;
+    margin-top: 30px;
+    max-width: 800px;
+  }
+  label{
+    color:#d49432;
+    
+  }

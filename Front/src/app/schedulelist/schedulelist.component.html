@@ -1,0 +1,48 @@
+<br>
+<nav class="navbar navbar-expand navbar-fixed-top">
+    <ul class = "navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class = "nav-item">
+          <a href="createschedule" routerLinkActive="active" class="btn btn-outline-primary" ><span style="font-size:20px">create schedule</span></a>
+      </li>
+      
+    </ul> 
+    <div style="margin-right:45%;" >
+        <span style="font-size: 25px;" class="navbar-brand mx-auto"><b>Work Schedule</b></span>
+    </div>
+    <ul class="nav navbar-nav my-2 my-lg-0">
+  
+    </ul><button class="btn btn-outline-danger" type="submit" (click)="Logout()" style="margin-right: 81px;">Logout</button>
+  </nav>
+  <br><br>
+  <table class="table " style="border: 1px solid; margin-left: 14%; width: 70%;" >
+    <thead class="text-center" style="color:rgb(8, 8, 8)">
+        <tr>
+            <th>EmpId</th>
+            <th>Date</th>
+            <th>Shift</th>
+            <th>StartingTIme</th>
+            <th>EndingTIme</th>
+            <th>Duration</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor = "let employee of Schedule" class="text-center">
+        <td style="color:black"> {{employee.empId}}</td>
+        <td style="color:black"> {{employee.date}}</td>
+        <td style="color:black"> {{employee.shift}}</td>
+        <td style="color:black"> {{employee.startingTime}}</td>
+        <td style="color:black">{{employee.endTime}}</td>
+        <td style="color:black">{{employee.duration}}</td>
+        <td>
+
+            <button (click) = "updateSchedule(employee.empId)" class = "btn btn-success"> Update</button>
+            <button (click) = "deleteSchedule(employee.empId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+&nbsp;&nbsp;&nbsp;<div class="text-center">
+    <a href="loginsuccess" class="btn btn-outline-danger"  style="margin-left: 87.5%; width: 80px;">Back</a>
+    </div>
