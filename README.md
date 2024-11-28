@@ -70,6 +70,7 @@ The complete source code for this project is available on GitHub:
 ### **Prerequisites**
 - Node.js and npm installed
 - MySQL database configured
+- STS installed(Spring Tool Suite)
 - Java JDK installed
 - Angular CLI installed globally (`npm install -g @angular/cli`)
 
